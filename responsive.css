@@ -1,0 +1,57 @@
+@media screen and (max-width: 700px) {
+    body{
+        min-height: 100vh;
+        display: initial;
+        justify-content: center;
+        align-items: center;
+        background: #181818;
+    }
+    .animat{
+        margin-left: 30px;
+        width: 600px;
+        height: 200px;
+        box-shadow: 16px 14px 20px #0000008c;
+        border-radius: 10px;
+        position: absolute;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .animat::before{
+        content: "";
+        background-image: conic-gradient(
+            rgb(34, 98, 236) 120deg,
+            120deg 
+        );
+        width: 280%;
+        height: 280%;
+        position: absolute;
+        animation: rotate 2s linear infinite;
+    }
+    
+    .animat::after{
+        content: "AniMatrix";
+        width: 590px;
+        height: 190px;
+        background: #101010;
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(34, 98, 236);
+        font-size: larger;
+        letter-spacing: 10px;
+        box-shadow: inset 20px 20px 20px #0000008c;
+    } 
+    @keyframes rotate{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+}
